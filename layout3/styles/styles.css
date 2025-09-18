@@ -1,0 +1,109 @@
+/* Base */
+* { box-sizing: border-box; }
+:root { --gap: 20px; --gray: #cfcfcf; }
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* Layout */
+.container {
+  width: 960px;
+  margin: 20px auto;
+  padding-left: 5px;
+  padding-right: 5px;
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "logo   nav"
+    "headline headline"
+    "products products"
+    "footer footer";
+}
+
+.logo { 
+    grid-area: logo; 
+    width: 232px; 
+    height: 72px; 
+    align-self: start; 
+    justify-self: start; 
+    background: var(--gray); }
+
+.nav { 
+    grid-area: nav; 
+    width: 430px; 
+    height: 48px; 
+    align-self: start; 
+    justify-self: end; 
+    background: var(--gray); }
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-items: center;
+  font-size: 14px;
+}
+
+.headline {
+  grid-area: headline;
+  background: var(--gray);
+  display: grid;
+  min-height: 350px;
+  padding: 20px;
+}
+
+.headline h1 {
+  margin: 40px 10px;
+  font-size: 42px;
+}
+
+.subhead {
+  margin: -70px 10px 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Products */
+.product-grid {
+  grid-area: products;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  grid-template-rows: 50px 160px 160px;  /* 3 equal rows */
+  gap: 18px;
+}
+
+.product-grid .box {
+  background: var(--gray);
+}
+
+
+.product-grid .box:nth-child(1){ grid-column: span 1; grid-row: span 1; } /* r1c1 */
+.product-grid .box:nth-child(2){ grid-column: span 1; grid-row: span 1; background:#fff;} /* r1c2 */
+.product-grid .box:nth-child(3){ grid-column: span 1; grid-row: span 1;  } /* r1c3 -> WHITE */
+.product-grid .box:nth-child(4){ grid-column: span 1; grid-row: span 1; background:#fff;} /* r2c1 */
+.product-grid .box:nth-child(5){ grid-column: span 2; grid-row: span 1; } /* r2c2 */
+.product-grid .box:nth-child(6){ grid-column: span 1; grid-row: span 1; } /* r2c3 */
+.product-grid .box:nth-child(7){ grid-column: span 1; grid-row: span 1; } /* r3c1 */
+.product-grid .box:nth-child(8){ grid-column: span 2; grid-row: span 1; } /* r3c2 */
+.product-grid .box:nth-child(9){ grid-column: span 1; grid-row: span 1; } /* r3c3 */
+
+/* Footer */
+.footer {
+  grid-area: footer;
+  background: var(--gray);
+  height: 40px;
+  display: grid;
+  place-items: center;
+}
+
+/* Label */
+.label {
+  margin: 0;
+  font-size: 14px;
+}
