@@ -1,0 +1,66 @@
+/* Base */
+* { box-sizing: border-box; }
+:root { --gap: 20px; --gray: #cfcfcf; }
+body {
+  margin: 0;
+}
+
+
+.container {
+  width: 960px;
+  margin: 20px auto;
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "logo   nav"
+    "featured featured"
+    "prod1  prod2"
+    "footer footer";
+}
+
+
+.box {
+  background: var(--gray);
+}
+
+
+.label {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Areas */
+.logo   { grid-area: logo; }
+.nav    { grid-area: nav; padding: 0; }      /* nav text centered in its bar */
+.featured-product {
+  grid-area: featured;   
+  min-height: 400px;
+}
+.prod1  { grid-area: prod1; min-height: 210px; }
+.prod2  { grid-area: prod2; min-height: 210px; }
+.footer { grid-area: footer; min-height: 60px; display: grid; place-items: center; }
+
+.logo { 
+    width: 232px; 
+    height: 72px; 
+    justify-self: start; 
+    align-self: start; }
+
+.nav  { 
+    width: 430px; 
+    height: 48px; 
+    justify-self: end;   
+    align-self: start; }
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-items: center;
+  font-size: 14px;
+}
