@@ -47,13 +47,13 @@ body {
     width: 232px; 
     height: 72px; 
     justify-self: start; 
-    align-self: start; }
+    align-self: center; }
 
 .nav  { 
     width: 430px; 
     height: 48px; 
     justify-self: end;   
-    align-self: start; }
+    align-self: center; }
 
 .nav-list {
   list-style: none;

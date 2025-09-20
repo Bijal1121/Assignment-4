@@ -26,7 +26,7 @@ body {
     grid-area: logo; 
     width: 232px; 
     height: 72px; 
-    align-self: start; 
+    align-self: center; 
     justify-self: start; 
     background: var(--gray); }
 
@@ -34,7 +34,7 @@ body {
     grid-area: nav; 
     width: 430px; 
     height: 48px; 
-    align-self: start; 
+    align-self: center; 
     justify-self: end; 
     background: var(--gray); }
 
